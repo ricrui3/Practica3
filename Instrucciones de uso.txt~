@@ -1,0 +1,10 @@
+El modo de escribir el Automata Finito Determinista(AFN):
+A B	// Primer linea A=Tamaño de Estados totales, B= El numeros de simbolos a usar 
+C D	// Segunda Linea C=Numero de estados totales, D= Escribir todos los estados finales d1 d2 d2...dn
+E	// E=Numero de tranciones a Realizar en total
+F G H	// F=Estado Inicial, G=Simbolos de ir de estado a otro, H=Todos los estados a los que ira con el simbolo selecionado en G  con H= h1 h2 h3...
+
+
+ Nota: Todas las seperaciones sera con un espacio y el simbolo epsilon en las tanals de simbolos sera expresado con el 0 en G y el estados inicial siempre sera el 0
+
+
