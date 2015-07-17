@@ -5,7 +5,9 @@ int main()  {
 
     // leido en la AFN 
     ifstream fin("AFN.txt");
-    fin >> N >> M;
+
+    fin >> N >> M; //Numero Total de estados, Numero de simbolos a usar
+
     AFNs = new AFN[N];
     fin >> F;
     for(i=0; i<F; i++)    {
@@ -56,7 +58,7 @@ int main()  {
     }
 
     // escribir el correspondiente AFD
-    ofstream fout("/home/mrubik/Practica3/AFD.txt");
+    ofstream fout("AFD.txt");
     fout << D << " " << M << "\n" << AFD_finalESTADOS.size();
     for(vector<int>::iterator it=AFD_finalESTADOS.begin(); it!=AFD_finalESTADOS.end(); it++)
         fout << " " << *it;
@@ -65,6 +67,7 @@ int main()  {
         for(j=1; j<=M; j++)
             fout << i << " " << j << " " << AFDESTADOSs[i]->symbolictransiciones[j] << "\n";
     }
+    fout << "hola!";
     fout.close();
     cout<<"Programa de conversion de un Automata Finito No determinista(NFA) \n"<<endl;
     cout<<"A un Automata Finito Determista(AFD)"<<endl; 
